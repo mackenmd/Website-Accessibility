@@ -1,0 +1,18 @@
+[00:00:00]
+>> Jon Kuperman: Focus control, so there's this really cool attribute called document.activeElement. And you can run that at any time in your console or whatever and you can get what the currently focused element is on the page. So as users tabbing through or whatever, you can use document.activeElement and see where you're at.
+
+[00:00:19]
+Okay, so before I go to the next slide, what's really cool with this is like, the probably most common use case is when you're doing modals. So I worked on some code at Twitter where you're scrolling through the timeline of tweets, and say you're doing it with a keyboard.
+
+[00:00:32]
+And then, so you're on the 30th tweet down, and then you're like, I wanna see that one. And you hit enter on it, and it brings up this modal of a close-up of that tweet or whatever. And you're like, that was really cool, and so then maybe you hit escape to close that thing away.
+
+[00:00:46]
+And then you hit your next tweet and it starts you back at the top and you're like what the heck? Like I was, I don't know I was like 30 tweets down. So like getting in that mind set, a really cool way you can use document.activeElement is when a user's about to do something like pop up a modal or pop down an accordion, anything like that.
+
+[00:01:02]
+You can save where they currently are. And then when they're done with that, you can just call .focus on currentElement and it will take them right back to where they were. So another, it's like two lines a code, one to store it and one to .focus on it when they close.
+
+[00:01:16]
+That can make a huge difference for users.
+
